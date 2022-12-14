@@ -14,7 +14,6 @@ class AuthController extends Controller
 
     public function login(Request $request): JsonResponse
     {
-//        login with sanctum
         $credentials = $request->only('email', 'password');
         if (auth()->attempt($credentials)) {
             $token = auth()->user()->createToken('authToken')->plainTextToken;
@@ -23,6 +22,12 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
 
         }
+    }
+
+    public function logout(): JsonResponse
+    {
+        auth()->user()->tokens()->delete();
+        return response()->json(['message' => 'Successfully logged out']);
     }
 
     private function respondWithToken($token):JsonResponse

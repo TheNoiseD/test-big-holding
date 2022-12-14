@@ -60,8 +60,10 @@ npm run build
 
 ### Endpoints
 - `POST /api/login`: Endpoint para loguearse y obtener el token de autenticación.
+- `GET /api/logout`: Endpoint para cerrar sesión.
 - `GET /api/clients`: Endpoint para obtener los clientes.'
 - `GET /api/clients/{id}`: Endpoint para obtener un cliente.'
+- 
 
 ## Autor ✒️
 
