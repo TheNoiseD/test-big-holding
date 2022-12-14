@@ -48,7 +48,7 @@ class ClientsDataTable extends DataTable
                     ->setTableId('users-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                    //->dom('Bfrtip')
+                    ->dom('<"header-actions d-flex justify-content-between "l<" ps-xl-75 ps-0"<"dt-action-buttons d-flex justify-content-end align-items-center break-450"<"me-1"f>B>>>t<"d-flex justify-content-between mx-2 row mb-1"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>')
                     ->orderBy(9, 'desc')
                     ->selectStyleSingle()
                     ->buttons([]);
